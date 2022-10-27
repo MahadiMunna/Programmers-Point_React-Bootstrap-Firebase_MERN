@@ -23,8 +23,8 @@ const Login = () => {
             const user = result.user;
             console.log(user)
             form.reset();
-            setError('');
             navigate('/');
+            setError('');
 
         })
         .catch(error =>{
@@ -38,7 +38,8 @@ const Login = () => {
         providerLogin(googleProvider)
         .then(result =>{
             const user = result.user;
-            console.log(user)
+            console.log(user);
+            navigate('/');
         } )
         .catch(error=>{
             console.log(error)
@@ -50,6 +51,7 @@ const Login = () => {
         .then(result=>{
             const user = result.user;
             console.log(user);
+            navigate('/');
         })
         .catch(error=>{
             console.log(error);

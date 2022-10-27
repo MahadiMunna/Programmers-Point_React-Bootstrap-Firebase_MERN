@@ -4,6 +4,7 @@ import { Button, Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 
+
 const Register = () => {
     const [error, setError] = useState('');
     const { auth, createUser } = useContext(AuthContext)
@@ -20,6 +21,7 @@ const Register = () => {
                 const user = result.user;
                 console.log(user)
                 setError('');
+                updateUserInfo(name,img)
                 form.reset();
                
             })
