@@ -1,13 +1,13 @@
-import { updateProfile } from 'firebase/auth';
 import React, { useContext, useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 
 
 const Register = () => {
     const [error, setError] = useState('');
-    const { auth, createUser } = useContext(AuthContext)
+    const { createUser, updateUserInfo } = useContext(AuthContext)
+    const navigate = useNavigate();
     const handleSubmit = event => {
         event.preventDefault();
         const form = event.target;
@@ -15,13 +15,15 @@ const Register = () => {
         const img = form.photoURL.value;
         const email = form.email.value;
         const password = form.password.value;
+        console.log(name,img)
 
         createUser(email, password)
             .then(result => {
                 const user = result.user;
-                console.log(user)
+                console.log(user);
                 setError('');
-                updateUserInfo(name,img)
+                navigate('/');
+                handleProfile(name,img)
                 form.reset();
                
             })
@@ -31,11 +33,12 @@ const Register = () => {
             })
 
     }
-    const updateUserInfo = (name, img) => {
-        updateProfile(auth.currentUser, {
+    const handleProfile = (name, img) => {
+        const profile = {
             displayName: name,
             photoURL: img
-        })
+        }
+        updateUserInfo(profile)
             .then(() => { })
             .catch((error) => {
                 console.log(error)
