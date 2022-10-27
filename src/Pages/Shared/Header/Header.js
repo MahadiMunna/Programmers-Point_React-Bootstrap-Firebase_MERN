@@ -35,6 +35,7 @@ const Header = () => {
                                             style={{ height: '30px' }} 
                                             roundedCircle 
                                             src={user?.photoURL}
+                                            title={user?.displayName}
                                         ></Image>
                                         <Link onClick={handleLogOut} className='ms-2 links' to='/login'>Log out</Link>
                                     </>
