@@ -1,0 +1,11 @@
+.logo-text{
+    text-decoration: none;
+}
+.links{
+    text-decoration: none;
+    margin-right: 15px;
+    color: black;
+}
+.links:hover{
+    color: blue;
+}
