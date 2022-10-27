@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Image, Tooltip } from 'react-bootstrap';
+import { Image } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -28,6 +28,8 @@ const Header = () => {
                             <Link className='links' to='/courses'>Courses</Link>
                             <Link className='links' to='/faq'>FAQ</Link>
                             <Link className='links' to='/blog'>Blog</Link>
+                            <Link className='links' to='/premium'>Get Premium access</Link>
+                            
                             {
                                 user?.uid ?
                                     <>

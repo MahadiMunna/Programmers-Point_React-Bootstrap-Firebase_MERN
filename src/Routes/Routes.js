@@ -6,6 +6,7 @@ import Enrollment from "../Pages/Enrollment/Enrollment";
 import Faq from "../Pages/Faq/Faq";
 import Home from "../Pages/Home/Home";
 import Login from "../Pages/Login/Login";
+import Premium from "../Pages/Premium/Premium";
 import Register from "../Pages/Register/Register";
 import Tutorials from "../Pages/Shared/Tutorials/Tutorials";
 import PrivateRoute from "./PrivateRoute";
@@ -33,6 +34,10 @@ export const routes = createBrowserRouter([
             {
                 path: '/tutorial/:id',
                 element: <PrivateRoute><Enrollment></Enrollment></PrivateRoute>,
+            },
+            {
+                path: '/premium',
+                element: <PrivateRoute><Premium></Premium></PrivateRoute>,
             },
             {
                 path: '/Fa',
