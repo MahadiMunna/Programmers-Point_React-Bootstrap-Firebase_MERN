@@ -11,48 +11,48 @@ import Tutorials from "../Pages/Shared/Tutorials/Tutorials";
 
 export const routes = createBrowserRouter([
     {
-        path:'/',
-        element:<Main></Main>,
-        children:[
+        path: '/',
+        element: <Main></Main>,
+        children: [
             {
-                path:'/',
-                element:<Home></Home>,
-                loader:()=>fetch('http://localhost:5000/tutorials')
+                path: '/',
+                element: <Home></Home>,
+                loader: () => fetch('https://programmers-point-server.vercel.app/tutorials')
             },
             {
-                path:'/courses',
-                element:<Courses></Courses>,
-                loader:()=>fetch('http://localhost:5000/courses')
+                path: '/courses',
+                element: <Courses></Courses>,
+                loader: () => fetch('https://programmers-point-server.vercel.app/courses')
             },
             {
-                path:'/tutorials/:id',
-                element:<Tutorials></Tutorials>,
-                loader:({params}) =>fetch(`http://localhost:5000/tutorials/${params.id}`)
+                path: '/tutorials/:id',
+                element: <Tutorials></Tutorials>,
+                loader: ({ params }) => fetch(`https://programmers-point-server.vercel.app/tutorials/${params.id}`)
             },
             {
-                path:'/tutorial/:id',
-                element:<Enrollment></Enrollment>,
+                path: '/tutorial/:id',
+                element: <Enrollment></Enrollment>,
             },
             {
-                path:'/Fa',
-                element:<Faq></Faq>
+                path: '/Fa',
+                element: <Faq></Faq>
             },
             {
-                path:'/blog',
-                element:<Blog></Blog>
+                path: '/blog',
+                element: <Blog></Blog>
             },
             {
-                path:'/login',
-                element:<Login></Login>
+                path: '/login',
+                element: <Login></Login>
             },
             {
-                path:'/register',
-                element:<Register></Register>
+                path: '/register',
+                element: <Register></Register>
             },
         ]
     },
     {
-        path:'*',
+        path: '*',
         element: <h2 className="text-center">404 page not found</h2>
     }
 ])
