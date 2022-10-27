@@ -1,4 +1,4 @@
-import { GithubAuthProvider, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
+import { GithubAuthProvider, GoogleAuthProvider} from 'firebase/auth';
 import React, { useContext, useState } from 'react';
 import { ButtonGroup } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
@@ -10,7 +10,7 @@ import { FaGoogle,FaGithub} from "react-icons/fa";
 const Login = () => {
     const [error,setError] = useState('');
     const navigate = useNavigate();
-    const {auth,signIn, providerLogin} = useContext(AuthContext)
+    const {signIn, providerLogin} = useContext(AuthContext)
 
     const handleSubmit = event => {
         event.preventDefault();
@@ -21,6 +21,7 @@ const Login = () => {
         signIn(email,password)
         .then(result=>{
             const user = result.user;
+            console.log(user)
             form.reset();
             setError('');
             navigate('/');
