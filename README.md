@@ -1,3 +1,27 @@
+# Website name
+
+Programmers Point
+
+# Live site link
+
+https://programmers-point.web.app/
+
+# Functionality
+
+> A course list showed.
+> If you want to enroll, you must have to be logged in.
+> You can register here.
+> Blog site will show you 4 questions answer.
+> After logged in your profile picture will be shown and you can also see log out. 
+
+# Technologies
+
+> React
+> React router dom
+> React bootstrap
+> Firebase
+> Vercel
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
