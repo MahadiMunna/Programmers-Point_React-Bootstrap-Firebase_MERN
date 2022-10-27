@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 const CourseCard = ({ course }) => {
     const { id, name, details, imgURL } = course;
     return (
-        <div>
+        <div className='col'>
             <Card style={{ width: '18rem' }}>
                 <Card.Img variant="top" src={imgURL} />
                 <Card.Body>

@@ -20,7 +20,7 @@ const Header = () => {
         <div>
             <Navbar bg="light" expand="lg">
                 <Container>
-                    <Image src=''></Image>
+                    <Image style={{ width: '30px',marginRight:'5px' }} src='https://i.ibb.co/hcYqtTX/5-54852-logo-computer-programming.jpg'></Image>
                     <Navbar.Brand><Link className='text-primary logo-text fw-bold me-5' to='/'>Programmers Point</Link></Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
