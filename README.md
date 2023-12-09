@@ -1,5 +1,7 @@
 # Programmers Point is a frontend project with React-Router-DOM and Bootstrap with login functionality. 
 
+This is client side. Server side repository: https://github.com/MahadiMunna/Programmers-Point_Server-side_Backend
+
 # Live site link
 
 https://programmers-point.web.app/
