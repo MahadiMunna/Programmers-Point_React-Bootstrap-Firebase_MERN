@@ -1,6 +1,4 @@
-# Website name
-
-Programmers Point
+# Programmers Point is a frontend project with React-Router-DOM and Bootstrap with login functionality. 
 
 # Live site link
 
